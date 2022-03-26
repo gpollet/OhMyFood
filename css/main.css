@@ -346,4 +346,53 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.titles--style {
+  font-family: "Shrikhand", cursive;
+}
+
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+}
+.footer-list .fa-solid {
+  width: 1.6em;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 1em;
+}
+.header__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__arrow {
+  margin-left: 2em;
+  font-size: 1.15em;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding-left: 1.5em;
+}
+.footer__logo {
+  font-family: "shrikhand";
+  font-weight: 500;
+  padding-top: 1em;
+}
+.footer__links {
+  padding-bottom: 1em;
 }/*# sourceMappingURL=main.css.map */

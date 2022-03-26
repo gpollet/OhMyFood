@@ -1,0 +1,13 @@
+.footer {
+    background-color: #353535;
+    color: white;
+    padding-left: 1.5em;
+    &__logo {
+        font-family: "shrikhand";
+        font-weight: 500;
+        padding-top: 1em;
+    }
+    &__links {
+        padding-bottom: 1em;
+    }
+}

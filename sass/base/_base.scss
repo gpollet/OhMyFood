@@ -1,9 +1,31 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
+}
+
+.titles--style {
+  font-family: 'Shrikhand', cursive;
+}
+
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+
+  .fa-solid {
+    width: 1.6em;
   }
+}

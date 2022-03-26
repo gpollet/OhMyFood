@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 1em;
+    &__logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__arrow {
+        margin-left: 2em;
+        font-size: 1.15em;
+    }
+}
