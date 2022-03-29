@@ -350,13 +350,14 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
 body a {
   text-decoration: none;
   color: inherit;
 }
 
-.titles--style {
+.restaurant-name__title {
   font-family: "Shrikhand", cursive;
 }
 
@@ -368,13 +369,43 @@ body a {
   width: 1.6em;
 }
 
+main > * {
+  background-color: #F6F6F6;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.footer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.buttons--pink {
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  border: 0;
+  padding: 1.2em;
+  box-shadow: -2px 5px 15px -10px black;
+}
+
+.fa-heart {
+  font-size: 25px;
+}
+
 .header {
   display: flex;
   align-items: center;
   padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: white;
 }
 .header__logo {
-  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -384,9 +415,11 @@ body a {
 }
 
 .footer {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
   background-color: #353535;
   color: white;
-  padding-left: 1.5em;
 }
 .footer__logo {
   font-family: "shrikhand";
@@ -395,4 +428,171 @@ body a {
 }
 .footer__links {
   padding-bottom: 1em;
+}
+
+/* Home page */
+/* #region Common */
+.main-home {
+  background: none;
+}
+.main-home > *:not(.user-location) {
+  padding-top: 2.5em;
+  padding-bottom: 3em;
+}
+
+/* #endregion Common */
+/* #region Geolocation */
+.user-location {
+  display: flex;
+  background: #dddddd;
+  height: 4em;
+  align-items: center;
+  justify-content: center;
+}
+.user-location__pin {
+  padding-right: 1em;
+}
+
+/* #endregion Geolocation */
+/* #region Ohmyfood presentation */
+.home-presentation {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  text-align: center;
+}
+
+.home-fonctionnement {
+  background-color: white;
+  width: 19em;
+}
+
+.fonctionnement-buttons__button {
+  cursor: default;
+  background-color: #F6F6F6;
+  display: flex;
+  position: relative;
+  height: 4em;
+  margin-top: 1.2em;
+  margin-left: 5%;
+  align-items: center;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: -2px 5px 15px -10px black;
+}
+.fonctionnement-buttons__button:hover i {
+  color: #9356DC;
+}
+.fonctionnement-buttons__button:hover {
+  background-color: #f2eafb;
+}
+.fonctionnement-buttons__numbers {
+  position: absolute;
+  text-align: center;
+  left: -1em;
+  bottom: 1em;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  height: 1.8em;
+  width: 1.8em;
+  padding: 0.4em;
+  font-weight: normal;
+}
+.fonctionnement-buttons__icons {
+  color: #777777;
+  font-size: 18px;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+
+/* #endregion Ohmyfood presentation */
+/* #region Restaurant list */
+.home-restaurants {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+}
+.home-restaurants h2 {
+  margin-bottom: 0;
+}
+
+.restaurants-cards {
+  background-color: white;
+  margin-top: 2em;
+  width: 18em;
+  box-shadow: -2px 5px 15px -10px black;
+  border-radius: 25px;
+}
+.restaurants-cards__img-block {
+  position: relative;
+}
+.restaurants-cards__img {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  height: 12em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants-cards__new-label {
+  cursor: pointer;
+  background-color: #99E2D0;
+  color: #2c9c81;
+  position: absolute;
+  padding: 0.5em;
+  top: 1em;
+  right: 1em;
+  font-weight: bold;
+  border-radius: 3px;
+  box-shadow: -2px 5px 15px -10px black;
+}
+.restaurants-cards__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5em;
+}
+.restaurants-cards__text > * {
+  white-space: nowrap;
+  margin-left: 10%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.restaurants-cards__text > p {
+  margin-top: 5px;
+}
+.restaurants-cards__heart {
+  margin-right: 5%;
+}
+
+/* #endregion Restaurant list */
+.restaurants-page__top-img {
+  background-color: white;
+}
+.restaurants-page__top-img img {
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurant-name__title {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant-name__title h1 {
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.course-category__title {
+  text-transform: uppercase;
+}
+
+.course-container {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

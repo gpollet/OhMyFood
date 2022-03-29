@@ -1,7 +1,9 @@
 .footer {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
     background-color: #353535;
     color: white;
-    padding-left: 1.5em;
     &__logo {
         font-family: "shrikhand";
         font-weight: 500;
