@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 
   a {
     text-decoration: none;
@@ -17,7 +18,7 @@ body {
   }
 }
 
-.titles--style {
+.restaurant-name__title {
   font-family: 'Shrikhand', cursive;
 }
 
@@ -28,4 +29,31 @@ body {
   .fa-solid {
     width: 1.6em;
   }
+}
+
+main>* {
+  background-color: $gray;
+  @include global-padding;
+}
+
+.footer {
+  @include global-padding;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.buttons--pink {
+  cursor: pointer;
+  color: white;
+  background: linear-gradient($color-secondary, $color-primary);
+  border-radius: 25px;
+  border: 0;
+  padding: 1.2em;
+  @include drop-shadow;
+}
+
+.fa-heart {
+  font-size: 25px;
 }

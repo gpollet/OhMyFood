@@ -1,0 +1,161 @@
+/* Home page */
+
+/* #region Common */
+
+.main-home {
+    background: none;
+
+    &>*:not(.user-location) {
+        padding-top: 2.5em;
+        padding-bottom: 3em;
+    }
+}
+
+/* #endregion Common */
+
+/* #region Geolocation */
+
+.user-location {
+    display: flex;
+    background: darken($color: $gray, $amount: 10%);
+    height: 4em;
+    @include center-xy;
+
+    &__pin {
+        padding-right: 1em;
+    }
+}
+
+/* #endregion Geolocation */
+
+/* #region Ohmyfood presentation */
+.home-presentation {
+    display: flex;
+    flex-direction: column;
+    background-color: $gray;
+    text-align: center;
+}
+
+
+.home-fonctionnement {
+    background-color: white;
+    width: 19em;
+}
+
+.fonctionnement-buttons {
+    &__button {
+        cursor: default;
+        background-color: $gray;
+        display: flex;
+        position: relative;
+        height: 4em;
+        margin-top: 1.2em;
+        margin-left: 5%;
+        align-items: center;
+        border-radius: 25px;
+        font-weight: bold;
+        @include drop-shadow;
+
+        &:hover i {
+            color: $color-primary;
+        }
+
+        &:hover {
+            background-color: lighten($color: $color-primary, $amount: 35%);
+        }
+    }
+
+    &__numbers {
+        position: absolute;
+        text-align: center;
+        left: -1em;
+        bottom: 1em;
+        background-color: $color-primary;
+        color: white;
+        border-radius: 50%;
+        height: 1.8em;
+        width: 1.8em;
+        padding: 0.4em;
+        font-weight: normal;
+    }
+
+    &__icons {
+        color: darken($color: $gray, $amount: 50%);
+        font-size: 18px;
+        margin-left: 2em;
+        margin-right: 1em;
+    }
+}
+
+/* #endregion Ohmyfood presentation */
+
+/* #region Restaurant list */
+
+.home-restaurants {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+
+    & h2 {
+        margin-bottom: 0;
+    }
+}
+
+.restaurants-cards {
+    background-color: white;
+    margin-top: 2em;
+    width: 18em;
+    @include drop-shadow;
+    @include all-corners-round;
+
+    &__img-block {
+        position: relative;
+
+    }
+
+    &__img {
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        width: 100%;
+        height: 12em;
+        object-fit: cover;
+    }
+
+    &__new-label {
+        cursor: pointer;
+        background-color: $color-tertiary;
+        color: darken($color: $color-tertiary, $amount: 35%);
+        position: absolute;
+        padding: 0.5em;
+        top: 1em;
+        right: 1em;
+        font-weight: bold;
+        border-radius: 3px;
+        @include drop-shadow;
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4.5em;
+    }
+
+    &__text>* {
+        white-space: nowrap;
+        margin-left: 10%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__text>p {
+        margin-top: 5px;
+    }
+
+    &__heart {
+        margin-right: 5%;
+    }
+}
+
+/* #endregion Restaurant list */

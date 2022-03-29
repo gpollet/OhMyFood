@@ -1,0 +1,31 @@
+.restaurants-page__top-img {
+    background-color: white;
+
+    & img {
+        width: 300px;
+        object-fit: cover;
+    }
+}
+
+.restaurant-name__title {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+
+    & h1 {
+        font-weight: normal;
+        font-size: 1.5em;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-category__title {
+    text-transform: uppercase;
+
+}
+
+.course-container {
+    display: flex;
+}
