@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 1em;
 
   a {
     text-decoration: none;
@@ -42,16 +42,6 @@ main>* {
 
 h2 {
   margin-top: 0;
-}
-
-.buttons--pink {
-  cursor: pointer;
-  color: white;
-  background: linear-gradient($color-secondary, $color-primary);
-  border-radius: 25px;
-  border: 0;
-  padding: 1.2em;
-  @include drop-shadow;
 }
 
 .fa-heart {

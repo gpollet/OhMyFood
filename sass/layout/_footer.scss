@@ -12,4 +12,8 @@
     &__links {
         padding-bottom: 1em;
     }
+
+    @include desktop-screen {
+        text-align: center;
+    }
 }

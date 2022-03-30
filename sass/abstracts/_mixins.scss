@@ -33,3 +33,13 @@
 @mixin all-corners-round {
     border-radius: 25px;
 }
+
+@mixin buttons--pink {
+    cursor: pointer;
+    color: white;
+    background: linear-gradient($color-secondary, $color-primary);
+    border-radius: 25px;
+    border: 0;
+    padding: 1.2em;
+    @include drop-shadow;
+  }
