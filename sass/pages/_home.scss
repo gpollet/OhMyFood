@@ -11,6 +11,10 @@
     }
 }
 
+.home__buttons--pink {
+    @include buttons--pink;
+}
+
 /* #endregion Common */
 
 /* #region Geolocation */
@@ -32,14 +36,20 @@
 .home-presentation {
     display: flex;
     flex-direction: column;
-    background-color: $gray;
     text-align: center;
 }
 
 
 .home-fonctionnement {
     background-color: white;
-    width: 19em;
+    min-width: 19em;
+    width: 100%;
+
+    @include desktop-screen {
+        h2 {
+            text-align: center;
+        }
+    }
 }
 
 .fonctionnement-buttons {
@@ -50,11 +60,14 @@
         position: relative;
         height: 4em;
         margin-top: 1.2em;
-        margin-left: 5%;
         align-items: center;
         border-radius: 25px;
         font-weight: bold;
         @include drop-shadow;
+
+        @include desktop-screen {
+            padding-right: 2em;
+        }
 
         &:hover i {
             color: $color-primary;
@@ -85,6 +98,16 @@
         margin-left: 2em;
         margin-right: 1em;
     }
+
+    @include desktop-screen {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @include phone-screen {
+        margin-left: 5%;
+    }
 }
 
 /* #endregion Ohmyfood presentation */
@@ -105,9 +128,14 @@
 .restaurants-cards {
     background-color: white;
     margin-top: 2em;
-    width: 18em;
+    min-width: 18em;
+    width: 100%;
     @include drop-shadow;
     @include all-corners-round;
+
+    @include desktop-screen {
+        width: 40%;
+    }
 
     &__img-block {
         position: relative;

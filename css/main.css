@@ -350,7 +350,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 1em;
 }
 body a {
   text-decoration: none;
@@ -382,16 +382,6 @@ main > * {
 
 h2 {
   margin-top: 0;
-}
-
-.buttons--pink {
-  cursor: pointer;
-  color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 25px;
-  border: 0;
-  padding: 1.2em;
-  box-shadow: -2px 5px 15px -10px black;
 }
 
 .fa-heart {
@@ -429,6 +419,11 @@ h2 {
 .footer__links {
   padding-bottom: 1em;
 }
+@media screen and (min-width: 992px) {
+  .footer {
+    text-align: center;
+  }
+}
 
 /* Home page */
 /* #region Common */
@@ -438,6 +433,16 @@ h2 {
 .main-home > *:not(.user-location) {
   padding-top: 2.5em;
   padding-bottom: 3em;
+}
+
+.home__buttons--pink {
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  border: 0;
+  padding: 1.2em;
+  box-shadow: -2px 5px 15px -10px black;
 }
 
 /* #endregion Common */
@@ -458,13 +463,18 @@ h2 {
 .home-presentation {
   display: flex;
   flex-direction: column;
-  background-color: #F6F6F6;
   text-align: center;
 }
 
 .home-fonctionnement {
   background-color: white;
-  width: 19em;
+  min-width: 19em;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .home-fonctionnement h2 {
+    text-align: center;
+  }
 }
 
 .fonctionnement-buttons__button {
@@ -474,11 +484,15 @@ h2 {
   position: relative;
   height: 4em;
   margin-top: 1.2em;
-  margin-left: 5%;
   align-items: center;
   border-radius: 25px;
   font-weight: bold;
   box-shadow: -2px 5px 15px -10px black;
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement-buttons__button {
+    padding-right: 2em;
+  }
 }
 .fonctionnement-buttons__button:hover i {
   color: #9356DC;
@@ -505,6 +519,18 @@ h2 {
   margin-left: 2em;
   margin-right: 1em;
 }
+@media screen and (min-width: 992px) {
+  .fonctionnement-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 766px) {
+  .fonctionnement-buttons {
+    margin-left: 5%;
+  }
+}
 
 /* #endregion Ohmyfood presentation */
 /* #region Restaurant list */
@@ -521,9 +547,15 @@ h2 {
 .restaurants-cards {
   background-color: white;
   margin-top: 2em;
-  width: 18em;
+  min-width: 18em;
+  width: 100%;
   box-shadow: -2px 5px 15px -10px black;
   border-radius: 25px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants-cards {
+    width: 40%;
+  }
 }
 .restaurants-cards__img-block {
   position: relative;
@@ -568,31 +600,90 @@ h2 {
 }
 
 /* #endregion Restaurant list */
+html {
+  background-color: #F6F6F6;
+}
+
+.restaurants-page__whole-menu {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  position: relative;
+  bottom: 3em;
+}
 .restaurants-page__top-img {
-  background-color: white;
+  padding: 0;
 }
 .restaurants-page__top-img img {
-  width: 300px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+section {
+  margin-bottom: 2em;
+}
+
 .restaurant-name__title {
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
+  padding-top: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .restaurant-name__title h1 {
   font-weight: normal;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .course-category__title {
   text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 1em;
 }
 
 .course-container {
   display: flex;
+  background-color: white;
+  justify-content: space-between;
+  margin-top: 1em;
+  width: 20.5em;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: -2px 5px 15px -10px black;
+}
+.course-container__description-block {
+  display: flex;
+  width: 20.5em;
+  justify-content: space-between;
+}
+.course-container__text > * {
+  white-space: nowrap;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  padding-right: 1em;
+}
+.course-container__description-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.95em;
+}
+.course-container__prices {
+  font-weight: bold;
+}
+
+.restaurants__buttons--margin {
+  margin-top: 4em;
+  text-align: center;
+}
+.restaurants__buttons--pink {
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  border: 0;
+  padding: 1.2em;
+  box-shadow: -2px 5px 15px -10px black;
+  padding: 1em 3em 1em 3em;
 }/*# sourceMappingURL=main.css.map */
