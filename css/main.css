@@ -583,6 +583,8 @@ h2 {
   }
 }
 
+/* Encore une autre modif */
+
 /* #endregion Ohmyfood presentation */
 /* #region Restaurant list */
 .home-restaurants {
@@ -595,6 +597,8 @@ h2 {
 .home-restaurants h2 {
   margin-bottom: 0;
 }
+
+/* UNE MODIF AU HASARD */
 
 @media screen and (min-width: 992px) {
   .home-restaurants h2 {
