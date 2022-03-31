@@ -70,6 +70,16 @@
 .fonctionnement-buttons {
 
     @include desktop-screen {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    @include phone-screen {
+        margin-left: 0.5em;
+    }
+
+    @include desktop-screen {
         & p {
             white-space: nowrap;
         }
@@ -79,19 +89,23 @@
         cursor: default;
         background-color: $gray;
         display: flex;
+        align-items: center;
         position: relative;
         height: 4em;
         margin-top: 1.2em;
-        align-items: center;
         border-radius: 25px;
         font-weight: bold;
-        max-width: 19em;
+
         @include drop-shadow;
 
         @include desktop-screen {
             padding-right: 2.5em;
             margin-bottom: 1em;
             max-width: 30%;
+        }
+
+        @include tablet-screen {
+            max-width: 20em;
         }
 
         &:hover i {
@@ -127,16 +141,6 @@
             margin-left: 1.5em;
             margin-right: 1.5em;
         }
-    }
-
-    @include desktop-screen {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-    }
-
-    @include phone-screen {
-        margin-left: 5%;
     }
 }
 

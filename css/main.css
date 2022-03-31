@@ -82,7 +82,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -352,7 +352,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
 }
-
 body a {
   text-decoration: none;
   color: inherit;
@@ -366,12 +365,11 @@ body a {
   list-style: none;
   padding-left: 0;
 }
-
 .footer-list .fa-solid {
   width: 1.6em;
 }
 
-main>* {
+main > * {
   background-color: #F6F6F6;
   padding-left: 5%;
   padding-right: 5%;
@@ -397,12 +395,10 @@ h2 {
   padding-bottom: 1em;
   background-color: white;
 }
-
 .header__logo {
   margin-left: auto;
   margin-right: auto;
 }
-
 .header__arrow {
   margin-left: 2em;
   font-size: 1.15em;
@@ -415,18 +411,20 @@ h2 {
   background-color: #353535;
   color: white;
 }
-
 .footer__logo {
   font-family: "shrikhand";
   font-weight: 500;
   padding-top: 1em;
 }
-
 .footer__links {
   padding-bottom: 1em;
 }
-
 @media screen and (min-width: 992px) {
+  .footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
   .footer {
     text-align: center;
   }
@@ -437,14 +435,12 @@ h2 {
 .main-home {
   background: none;
 }
-
-.main-home>*:not(.user-location) {
+.main-home > *:not(.user-location) {
   padding-top: 1em;
   padding-bottom: 1em;
 }
-
 @media screen and (max-width: 766px) {
-  .main-home>*:not(.user-location) {
+  .main-home > *:not(.user-location) {
     padding-top: 2.5em;
     padding-bottom: 3em;
   }
@@ -469,7 +465,6 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-
 .user-location__pin {
   padding-right: 1em;
 }
@@ -481,7 +476,6 @@ h2 {
   flex-direction: column;
   text-align: center;
 }
-
 @media screen and (min-width: 992px) {
   .home-presentation {
     margin-bottom: 0.2em;
@@ -493,12 +487,10 @@ h2 {
   min-width: 19em;
   width: 100%;
 }
-
 @media screen and (min-width: 992px) {
   .home-fonctionnement {
     margin-bottom: 0;
   }
-
   .home-fonctionnement h2 {
     text-align: center;
     margin-bottom: 0;
@@ -506,25 +498,34 @@ h2 {
 }
 
 @media screen and (min-width: 992px) {
+  .fonctionnement-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 766px) {
+  .fonctionnement-buttons {
+    margin-left: 0.5em;
+  }
+}
+@media screen and (min-width: 992px) {
   .fonctionnement-buttons p {
     white-space: nowrap;
   }
 }
-
 .fonctionnement-buttons__button {
   cursor: default;
   background-color: #F6F6F6;
   display: flex;
+  align-items: center;
   position: relative;
   height: 4em;
   margin-top: 1.2em;
-  align-items: center;
   border-radius: 25px;
   font-weight: bold;
-  max-width: 19em;
   box-shadow: -2px 5px 15px -10px black;
 }
-
 @media screen and (min-width: 992px) {
   .fonctionnement-buttons__button {
     padding-right: 2.5em;
@@ -532,15 +533,17 @@ h2 {
     max-width: 30%;
   }
 }
-
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .fonctionnement-buttons__button {
+    max-width: 20em;
+  }
+}
 .fonctionnement-buttons__button:hover i {
   color: #9356DC;
 }
-
 .fonctionnement-buttons__button:hover {
   background-color: #f2eafb;
 }
-
 .fonctionnement-buttons__numbers {
   position: absolute;
   text-align: center;
@@ -554,32 +557,16 @@ h2 {
   padding: 0.4em;
   font-weight: normal;
 }
-
 .fonctionnement-buttons__icons {
   color: #777777;
   font-size: 18px;
   margin-left: 2em;
   margin-right: 1em;
 }
-
 @media screen and (min-width: 992px) {
   .fonctionnement-buttons__icons {
     margin-left: 1.5em;
     margin-right: 1.5em;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .fonctionnement-buttons {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-  }
-}
-
-@media screen and (max-width: 766px) {
-  .fonctionnement-buttons {
-    margin-left: 5%;
   }
 }
 
@@ -591,11 +578,9 @@ h2 {
   padding-top: 3.5em;
   padding-bottom: 3.5em;
 }
-
 .home-restaurants h2 {
   margin-bottom: 0;
 }
-
 @media screen and (min-width: 992px) {
   .home-restaurants h2 {
     text-align: center;
@@ -610,38 +595,32 @@ h2 {
   box-shadow: -2px 5px 15px -10px black;
   border-radius: 25px;
 }
-
 @media screen and (min-width: 992px) {
   .restaurants-cards {
     width: 40%;
   }
-
   .restaurants-cards--desktop {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 }
-
 .restaurants-cards__img-block {
   position: relative;
 }
-
 .restaurants-cards__img {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   width: 100%;
   height: 12em;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-
 @media screen and (min-width: 992px) {
   .restaurants-cards__img {
     height: 16em;
   }
 }
-
 .restaurants-cards__new-label {
   cursor: pointer;
   background-color: #99E2D0;
@@ -654,25 +633,21 @@ h2 {
   border-radius: 3px;
   box-shadow: -2px 5px 15px -10px black;
 }
-
 .restaurants-cards__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4.5em;
 }
-
-.restaurants-cards__text>* {
+.restaurants-cards__text > * {
   white-space: nowrap;
   margin-left: 10%;
   margin-top: 0;
   margin-bottom: 0;
 }
-
-.restaurants-cards__text>p {
+.restaurants-cards__text > p {
   margin-top: 5px;
 }
-
 .restaurants-cards__heart {
   margin-right: 5%;
 }
@@ -688,31 +663,93 @@ html {
   position: relative;
   bottom: 3em;
 }
-
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .restaurants-page__whole-menu {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants-page__whole-menu {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
 .restaurants-page__top-img {
   padding: 0;
 }
-
 .restaurants-page__top-img img {
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 766px) {
+  .restaurants-page__top-img img {
+    height: 15em;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .restaurants-page__top-img img {
+    height: 10em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants-page__top-img img {
+    height: 20em;
+  }
 }
 
-section {
+.restaurants-pages__section {
   margin-bottom: 2em;
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .restaurants-pages__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants-pages__section .course-container--desktop-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+  }
 }
 
 .restaurant-name__title {
-  padding-top: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 1em;
 }
-
+@media screen and (min-width: 992px) {
+  .restaurant-name__title {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .restaurant-name__title {
+    justify-content: center;
+  }
+}
 .restaurant-name__title h1 {
   font-weight: normal;
   font-size: 1.8em;
+}
+@media screen and (min-width: 992px) {
+  .restaurant-name__title h1 {
+    margin-right: 1em;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .restaurant-name__title h1 {
+    margin-right: 1.5em;
+  }
+}
+.restaurant-name__title .restaurants-cards__heart {
+  margin-right: 0;
 }
 
 .course-category__title {
@@ -720,26 +757,75 @@ section {
   font-size: 20px;
   font-weight: normal;
   margin-top: 1em;
+  margin-bottom: 0;
+  position: relative;
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .course-category__title {
+    margin-top: 0;
+  }
+}
+.course-category__title:after {
+  content: "";
+  height: 0.2em;
+  width: 2.5em;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0em;
+  bottom: -0.4em;
 }
 
 .course-container {
-  display: flex;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
   background-color: white;
   justify-content: space-between;
   margin-top: 1em;
-  width: 20.5em;
   border-radius: 15px;
   position: relative;
   box-shadow: -2px 5px 15px -10px black;
 }
-
+@media screen and (max-width: 766px) {
+  .course-container {
+    min-width: 20.5em;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .course-container {
+    width: 30em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .course-container {
+    width: 20em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .course-container {
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+  }
+}
 .course-container__description-block {
   display: flex;
-  width: 20.5em;
   justify-content: space-between;
 }
-
-.course-container__text>* {
+@media screen and (max-width: 766px) {
+  .course-container__description-block {
+    min-width: 20.5em;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .course-container__description-block {
+    width: 30em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .course-container__description-block {
+    width: 20em;
+  }
+}
+.course-container__text > * {
   white-space: nowrap;
   margin-top: 0;
   margin-bottom: 0.5em;
@@ -747,13 +833,11 @@ section {
   margin-top: 0.5em;
   padding-right: 1em;
 }
-
 .course-container__description-text {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 0.95em;
 }
-
 .course-container__prices {
   font-weight: bold;
 }
@@ -762,7 +846,11 @@ section {
   margin-top: 4em;
   text-align: center;
 }
-
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .restaurants__buttons--margin {
+    margin-top: 0;
+  }
+}
 .restaurants__buttons--pink {
   cursor: pointer;
   color: white;
@@ -772,6 +860,4 @@ section {
   padding: 1.2em;
   box-shadow: -2px 5px 15px -10px black;
   padding: 1em 3em 1em 3em;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -16,4 +16,8 @@
     @include desktop-screen {
         text-align: center;
     }
+
+    @include tablet-screen {
+        text-align: center;
+    }
 }

@@ -3,14 +3,15 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $gray: #F6F6F6;
 
-$breakpoints-min: (
-    tablet: 767px,
+$breakpoints-min: (tablet: 767px,
     desktop: 992px,
 );
 
-$breakpoints-max: (
-    phone: 766px,
+$breakpoints-max: (phone: 766px,
     tablet: 991px,
 );
 
-$cards-width : 20.5em;
+$cards-width : (phone: 20.5em,
+    tablet: 30em,
+    desktop: 20em,
+);
