@@ -13,5 +13,7 @@ $breakpoints-max: (phone: 766px,
 
 $cards-width : (phone: 20.5em,
     tablet: 30em,
-    desktop: 20em,
 );
+
+$animation__load-course--delay: 0.3ms;
+$animation__load-course--duration : 0.6s;

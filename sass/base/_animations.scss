@@ -1,0 +1,40 @@
+@keyframes loading-spinner {
+    0% {
+        transform: translateX(1%);
+        z-index: 1;
+    }
+
+    75% {
+        transform: translateX(1% * -1);
+        z-index: 0;
+    }
+}
+
+
+@media screen and (max-width:(map-get($breakpoints-max, tablet))) {
+    @keyframes course-loader {
+        0% {
+            opacity: 0;
+            transform: translateY(1em);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@media screen and (min-width:(map-get($breakpoints-min, desktop))) {
+    @keyframes course-loader {
+        0% {
+            opacity: 0;
+            transform: translateX(1em);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
