@@ -69,27 +69,22 @@ html {
     }
 
     @include desktop-screen {
-        & .course-container--desktop-flex {
-            display: flex;
-            margin-top: 1em;
-            flex-wrap: wrap;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 .restaurant-name__title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding-top: 1em;
+    justify-content: center;
 
-    @include desktop-screen {
-        justify-content: flex-start;
+    @include phone-screen {
+        justify-content: space-between;
     }
 
-    @include tablet-screen {
-        justify-content: center;
-    }
 
     & h1 {
         font-weight: normal;
@@ -158,6 +153,10 @@ html {
         padding-bottom: 0.2em;
         border-radius: 15px;
         @include drop-shadow;
+
+        @include desktop-screen {
+            width: 30em;
+        }
     }
 
     &__text>* {
