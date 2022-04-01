@@ -47,6 +47,21 @@ html {
 .restaurants-pages__section {
     margin-bottom: 2em;
 
+    &:nth-child(2) {
+        @include load-course;
+        animation-delay: $animation__load-course--delay;
+    }
+
+    &:nth-child(3) {
+        @include load-course;
+        animation-delay: ($animation__load-course--delay + $animation__load-course--duration);
+    }
+
+    &:nth-child(4) {
+        @include load-course;
+        animation-delay: ($animation__load-course--delay + $animation__load-course--duration * 2);
+    }
+
     @include tablet-screen {
         display: flex;
         flex-direction: column;
@@ -56,8 +71,8 @@ html {
     @include desktop-screen {
         & .course-container--desktop-flex {
             display: flex;
-            flex-wrap: wrap;
             margin-top: 1em;
+            flex-wrap: wrap;
         }
     }
 }
@@ -119,25 +134,30 @@ html {
 }
 
 .course-container {
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    background-color: white;
     justify-content: space-between;
     margin-top: 1em;
-    @include cards-width;
     border-radius: 15px;
+    @include cards-width;
     position: relative;
-    @include drop-shadow;
 
     @include desktop-screen {
         margin-right: 1.5em;
         margin-bottom: 1em;
+        width: 100%;
     }
 
     &__description-block {
         display: flex;
         @include cards-width;
         justify-content: space-between;
+    }
+
+    &__text {
+        background-color: white;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        border-radius: 15px;
+        @include drop-shadow;
     }
 
     &__text>* {

@@ -57,3 +57,9 @@
         width: map-get($cards-width, desktop);
     }
 }
+
+@mixin load-course {
+    opacity: 0;
+    animation: $animation__load-course--duration course-loader ease-out;
+    animation-fill-mode: forwards;
+}
