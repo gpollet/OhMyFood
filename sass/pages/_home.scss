@@ -273,6 +273,7 @@
 
         background-image: linear-gradient($color-primary 15%, $color-secondary);
         animation: fill-heart 0.30s;
+        background-clip: text;
         animation-fill-mode: forwards;
     }
 
@@ -282,6 +283,7 @@
 
         background-image: linear-gradient($color-primary 15%, $color-secondary);
         animation: fill-heart 0.30s;
+        background-clip: text;
         animation-fill-mode: forwards;
     }
 }
