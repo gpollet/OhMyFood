@@ -1,32 +1,35 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 html {
-    background-color: $gray;
+    background-color: variables.$gray;
 }
 
 .restaurants-pages__section {
     margin-bottom: 2em;
 
     &:nth-child(2) {
-        @include load-course;
-        animation-delay: $animation__load-course--delay;
+        @include mixins.load-course;
+        animation-delay: variables.$animation__load-course--delay;
     }
 
     &:nth-child(3) {
-        @include load-course;
-        animation-delay: ($animation__load-course--delay + $animation__load-course--duration);
+        @include mixins.load-course;
+        animation-delay: (variables.$animation__load-course--delay + variables.$animation__load-course--duration);
     }
 
     &:nth-child(4) {
-        @include load-course;
-        animation-delay: ($animation__load-course--delay + $animation__load-course--duration * 2);
+        @include mixins.load-course;
+        animation-delay: (variables.$animation__load-course--delay + variables.$animation__load-course--duration * 2);
     }
 
-    @include tablet-screen {
+    @include mixins.tablet-screen {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    @include desktop-screen {
+    @include mixins.desktop-screen {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,7 +42,7 @@ html {
     padding-top: 1em;
     justify-content: center;
 
-    @include phone-screen {
+    @include mixins.phone-screen {
         justify-content: space-between;
     }
 
@@ -48,11 +51,11 @@ html {
         font-weight: normal;
         font-size: 1.8em;
 
-        @include desktop-screen {
+        @include mixins.desktop-screen {
             margin-right: 1em;
         }
 
-        @include tablet-screen {
+        @include mixins.tablet-screen {
             margin-right: 1.5em;
         }
     }
@@ -67,7 +70,7 @@ html {
     margin-bottom: 0;
     position: relative;
 
-    @include tablet-screen {
+    @include mixins.tablet-screen {
         margin-top: 0;
     }
 
@@ -76,7 +79,7 @@ html {
         content: "";
         height: 0.2em;
         width: 2.5em;
-        background-color: $color-tertiary;
+        background-color: variables.$color-tertiary;
         position: absolute;
         left: 0;
         bottom: -0.4em;
@@ -87,10 +90,10 @@ html {
     justify-content: space-between;
     margin-top: 1em;
     border-radius: 15px;
-    @include cards-width;
+    @include mixins.cards-width;
     position: relative;
 
-    @include desktop-screen {
+    @include mixins.desktop-screen {
         margin-right: 1.5em;
         margin-bottom: 1em;
         width: 100%;
@@ -98,7 +101,7 @@ html {
 
     &__description-block {
         display: flex;
-        @include cards-width;
+        @include mixins.cards-width;
         justify-content: space-between;
     }
 
@@ -107,9 +110,9 @@ html {
         padding-top: 0.2em;
         padding-bottom: 0.2em;
         border-radius: 15px;
-        @include drop-shadow;
+        @include mixins.drop-shadow;
 
-        @include desktop-screen {
+        @include mixins.desktop-screen {
             width: 30em;
         }
     }
