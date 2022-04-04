@@ -131,7 +131,6 @@ html {
 .course-container {
     justify-content: space-between;
     margin-top: 1em;
-    border-radius: 15px;
     @include cards-width;
     position: relative;
 
@@ -143,7 +142,6 @@ html {
 
     &__description-block {
         display: flex;
-        @include cards-width;
         justify-content: space-between;
     }
 
@@ -152,7 +150,8 @@ html {
         z-index: -1;
         padding-top: 0.2em;
         padding-bottom: 0.2em;
-        border-radius: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
 
         @include desktop-screen {
             width: 30em;
@@ -198,13 +197,14 @@ html {
 
 .couche-sup {
     @include drop-shadow;
-    @include all-corners-round;
+    border-radius: 15px;
     cursor: pointer;
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: $color-tertiary;
     height: 100%;
-    position: relative;
+
 
     @include desktop-screen {
         width: 30em;
@@ -213,7 +213,7 @@ html {
     & .couche-mid {
         animation: cards-check-out $cards-animation-duration forwards ease-in-out;
     }
-    
+
     & .course-container__text {
         animation: cards-pushed-out $cards-animation-duration forwards ease-in-out;
     }
@@ -224,9 +224,7 @@ html {
     visibility: hidden;
     justify-content: center;
     align-items: center;
-    background-color: $color-tertiary;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    background-clip: text;
     height: 100%;
     top: 0;
     right: 0;
@@ -241,10 +239,17 @@ html {
     & .couche-mid {
         animation: cards-check-in $cards-animation-duration forwards ease-in-out;
     }
+
     & .course-container__text {
         animation: cards-pushed-in $cards-animation-duration forwards ease-in-out;
     }
+
     & .check-icon-rotation {
         animation: check-rotation $cards-animation-duration forwards ease-in-out;
+        animation-delay: 0.1s;
     }
+}
+
+.check-icon-rotation {
+    overflow: hidden;
 }
