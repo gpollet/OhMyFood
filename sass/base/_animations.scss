@@ -88,15 +88,11 @@
     from {
         width: 0;
         visibility: hidden;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
     }
 
     to {
         width: 25%;
         visibility: visible;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
     }
 }
 
@@ -105,15 +101,11 @@
     from {
         width: 25%;
         visibility: visible;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
     }
 
     to {
         width: 0;
         visibility: hidden;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
     }
 }
 

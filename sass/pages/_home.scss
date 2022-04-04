@@ -104,7 +104,6 @@
     }
 
     &__button {
-        cursor: default;
         background-color: $gray;
         display: flex;
         align-items: center;
@@ -113,6 +112,7 @@
         margin-top: 1.2em;
         border-radius: 25px;
         font-weight: bold;
+        cursor: pointer;
 
         @include drop-shadow;
 
