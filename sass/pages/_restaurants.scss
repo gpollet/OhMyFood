@@ -149,10 +149,10 @@ html {
 
     &__text {
         background-color: white;
+        z-index: -1;
         padding-top: 0.2em;
         padding-bottom: 0.2em;
         border-radius: 15px;
-        @include drop-shadow;
 
         @include desktop-screen {
             width: 30em;
@@ -192,5 +192,58 @@ html {
     &--pink {
         @include buttons--pink;
         padding: 1em 3em 1em 3em;
+    }
+}
+
+
+.couche-sup {
+    @include drop-shadow;
+    @include all-corners-round;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @include desktop-screen {
+        width: 30em;
+    }
+
+    & .couche-mid {
+        animation: cards-check-out $cards-animation-duration forwards ease-in-out;
+    }
+    
+    & .course-container__text {
+        animation: cards-pushed-out $cards-animation-duration forwards ease-in-out;
+    }
+}
+
+.couche-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    color: white;
+    font-size: 2em;
+}
+
+
+.couche-sup:hover {
+    & .couche-mid {
+        animation: cards-check-in $cards-animation-duration forwards ease-in-out;
+    }
+    & .course-container__text {
+        animation: cards-pushed-in $cards-animation-duration forwards ease-in-out;
+    }
+    & .check-icon-rotation {
+        animation: check-rotation $cards-animation-duration forwards ease-in-out;
     }
 }
