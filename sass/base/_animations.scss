@@ -82,3 +82,76 @@
         z-index: -1;
     }
 }
+
+@keyframes cards-check-in {
+
+    from {
+        width: 0;
+        visibility: hidden;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    to {
+        width: 25%;
+        visibility: visible;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+@keyframes cards-check-out {
+
+    from {
+        width: 25%;
+        visibility: visible;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    to {
+        width: 0;
+        visibility: hidden;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+@keyframes cards-pushed-in {
+    from {
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    to {
+        width: 75%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@keyframes cards-pushed-out {
+    from {
+        width: 75%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    to {
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+@keyframes check-rotation {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
