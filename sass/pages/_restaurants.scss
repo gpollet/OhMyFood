@@ -221,6 +221,7 @@ html {
 
 .couche-mid {
     display: flex;
+    visibility: hidden;
     justify-content: center;
     align-items: center;
     background-color: $color-tertiary;
