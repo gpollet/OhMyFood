@@ -15,11 +15,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loading-mask 1.5s forwards ease-out;
+    animation: loading-mask 1.2s forwards ease-out;
 }
 
 .loading-spinner {
-    animation: loading-spinner 1.5s both;
+    animation: loading-spinner 1.2s both;
 
     /* "As page load time goes from 1s to 3s the probability of bounce increases 32% ; 1s to 5ss => 90%
 Source : https://developers.google.com/web/tools/lighthouse
