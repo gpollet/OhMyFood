@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 html {
   box-sizing: border-box;
 }
@@ -32,12 +35,12 @@ body {
 }
 
 main>* {
-  background-color: $gray;
-  @include global-padding;
+  background-color: variables.$gray;
+  @include mixins.global-padding;
 }
 
 .footer {
-  @include global-padding;
+  @include mixins.global-padding;
 }
 
 h2 {

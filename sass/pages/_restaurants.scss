@@ -1,5 +1,8 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 html {
-    background-color: $gray;
+    background-color: variables.$gray;
 }
 
 .restaurants-page {
@@ -9,14 +12,14 @@ html {
         position: relative;
         bottom: 3em;
 
-        @include tablet-screen {
+        @include mixins.tablet-screen {
 
             display: flex;
             flex-direction: column;
             white-space: nowrap;
         }
 
-        @include desktop-screen {
+        @include mixins.desktop-screen {
             padding-left: 1em;
             padding-right: 1em;
         }
@@ -29,15 +32,15 @@ html {
             width: 100%;
             object-fit: cover;
 
-            @include phone-screen {
+            @include mixins.phone-screen {
                 height: 15em;
             }
 
-            @include tablet-screen {
+            @include mixins.tablet-screen {
                 height: 10em;
             }
 
-            @include desktop-screen {
+            @include mixins.desktop-screen {
                 height: 20em;
             }
         }
@@ -48,27 +51,27 @@ html {
     margin-bottom: 2em;
 
     &:nth-child(2) {
-        @include load-course;
-        animation-delay: $animation__load-course--delay;
+        @include mixins.load-course;
+        animation-delay: variables.$animation__load-course--delay;
     }
 
     &:nth-child(3) {
-        @include load-course;
-        animation-delay: ($animation__load-course--delay + $animation__load-course--duration);
+        @include mixins.load-course;
+        animation-delay: (variables.$animation__load-course--delay + variables.$animation__load-course--duration);
     }
 
     &:nth-child(4) {
-        @include load-course;
-        animation-delay: ($animation__load-course--delay + $animation__load-course--duration * 2);
+        @include mixins.load-course;
+        animation-delay: (variables.$animation__load-course--delay + variables.$animation__load-course--duration * 2);
     }
 
-    @include tablet-screen {
+    @include mixins.tablet-screen {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    @include desktop-screen {
+    @include mixins.desktop-screen {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -81,7 +84,7 @@ html {
     padding-top: 1em;
     justify-content: center;
 
-    @include phone-screen {
+    @include mixins.phone-screen {
         justify-content: space-between;
     }
 
@@ -90,11 +93,11 @@ html {
         font-weight: normal;
         font-size: 1.8em;
 
-        @include desktop-screen {
+        @include mixins.desktop-screen {
             margin-right: 1em;
         }
 
-        @include tablet-screen {
+        @include mixins.tablet-screen {
             margin-right: 1.5em;
         }
     }
@@ -112,7 +115,7 @@ html {
     margin-bottom: 0;
     position: relative;
 
-    @include tablet-screen {
+    @include mixins.tablet-screen {
         margin-top: 0;
     }
 
@@ -121,7 +124,7 @@ html {
         content: "";
         height: 0.2em;
         width: 2.5em;
-        background-color: $color-tertiary;
+        background-color: variables.$color-tertiary;
         position: absolute;
         left: 0;
         bottom: -0.4em;
@@ -131,10 +134,10 @@ html {
 .course-container {
     justify-content: space-between;
     margin-top: 1em;
-    @include cards-width;
+    @include mixins.cards-width;
     position: relative;
 
-    @include desktop-screen {
+    @include mixins.desktop-screen {
         margin-right: 1.5em;
         margin-bottom: 1em;
         width: 100%;
@@ -153,7 +156,7 @@ html {
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
 
-        @include desktop-screen {
+        @include mixins.desktop-screen {
             width: 30em;
         }
     }
@@ -183,39 +186,39 @@ html {
         margin-top: 4em;
         text-align: center;
 
-        @include tablet-screen {
+        @include mixins.tablet-screen {
             margin-top: 0;
         }
     }
 
     &--pink {
-        @include buttons--pink;
+        @include mixins.buttons--pink;
         padding: 1em 3em 1em 3em;
     }
 }
 
 
 .couche-sup {
-    @include drop-shadow;
+    @include mixins.drop-shadow;
     border-radius: 15px;
     cursor: pointer;
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: $color-tertiary;
+    background-color: variables.$color-tertiary;
     height: 100%;
 
 
-    @include desktop-screen {
+    @include mixins.desktop-screen {
         width: 30em;
     }
 
     & .couche-mid {
-        animation: cards-check-out $cards-animation-duration forwards ease-in-out;
+        animation: cards-check-out variables.$cards-animation-duration forwards ease-in-out;
     }
 
     & .course-container__text {
-        animation: cards-pushed-out $cards-animation-duration forwards ease-in-out;
+        animation: cards-pushed-out variables.$cards-animation-duration forwards ease-in-out;
     }
 }
 
@@ -237,15 +240,15 @@ html {
 
 .couche-sup:hover {
     & .couche-mid {
-        animation: cards-check-in $cards-animation-duration forwards ease-in-out;
+        animation: cards-check-in variables.$cards-animation-duration forwards ease-in-out;
     }
 
     & .course-container__text {
-        animation: cards-pushed-in $cards-animation-duration forwards ease-in-out;
+        animation: cards-pushed-in variables.$cards-animation-duration forwards ease-in-out;
     }
 
     & .check-icon-rotation {
-        animation: check-rotation $cards-animation-duration forwards ease-in-out;
+        animation: check-rotation variables.$cards-animation-duration forwards ease-in-out;
         animation-delay: 0.1s;
     }
 }
