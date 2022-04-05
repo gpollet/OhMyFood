@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../abstracts/variables";
+
 @keyframes loading-spinner {
     0% {
         transform: translateX(1%);
@@ -11,7 +14,7 @@
 }
 
 
-@media screen and (max-width:(map-get($breakpoints-max, tablet))) {
+@media screen and (max-width:(map.get(variables.$breakpoints-max, tablet))) {
     @keyframes course-loader {
         0% {
             opacity: 0;
@@ -25,7 +28,7 @@
     }
 }
 
-@media screen and (min-width:(map-get($breakpoints-min, desktop))) {
+@media screen and (min-width:(map.get(variables.$breakpoints-min, desktop))) {
     @keyframes course-loader {
         0% {
             opacity: 0;
@@ -55,7 +58,7 @@
     }
 
     95% {
-        color: $color-tertiary;
+        color: variables.$color-tertiary;
         z-index: 1;
     }
 
@@ -69,11 +72,11 @@
 @keyframes loading-mask {
 
     0% {
-        background-color: $gray;
+        background-color: variables.$gray;
     }
 
     95% {
-        background-color: $gray;
+        background-color: variables.$gray;
         z-index: 1;
     }
 

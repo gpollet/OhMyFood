@@ -1,18 +1,18 @@
-@import "./abstracts/functions";
-@import "./abstracts/mixins";
-@import "./abstracts/placeholders";
-@import "./abstracts/variables";
+@use "abstracts/functions";
+@use "abstracts/mixins";
+@use "abstracts/placeholders";
+@use "abstracts/variables";
 
-@import "./vendors/normalize";
+@use "vendors/normalize";
 
-@import "./base/base";
-@import "./base/typography";
-@import "./base/animations";
+@use "base/base";
+@use "base/typography";
+@use "base/animations";
 
-@import "./layout/header";
-@import "./layout/footer";
+@use "layout/header";
+@use "layout/footer";
 
-@import "./components/buttons";
+@use "components/buttons";
 
-@import "./pages/home";
-@import "./pages/restaurants";
+@use "pages/home";
+@use "pages/restaurants";
